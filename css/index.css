@@ -20392,6 +20392,14 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
+/* 页面背景图（优先作用于主题背景容器） */
+#web_bg {
+  background: url(/img/31.png) center / cover no-repeat fixed !important;
+}
+/* 兜底：直接给 body，防止被其他样式覆盖 */
+body {
+  background: url(/img/31.png) center / cover no-repeat fixed !important;
+}
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
