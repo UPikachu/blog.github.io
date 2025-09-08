@@ -1,3 +1,3 @@
-var posts=["2025/08/29/hello-world/","2025/08/29/文章标题/"];function toRandomPost(){
+var posts=["posts/4a17b156/","posts/3bf4a27/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
