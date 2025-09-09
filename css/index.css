@@ -20400,6 +20400,54 @@ html.hide-aside .layout > div:first-child {
 body {
   background: url(/img/31.png) center / cover no-repeat fixed !important;
 }
+
+/* ===== 鼠标同心圆特效（开始） ===== */
+/* Cursor effect: two concentric circles */
+#cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: #009688;
+  border-radius: 8px;
+  opacity: 0.25;
+  z-index: 10086;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+  transition-property: background, opacity, transform;
+}
+#cursor.hidden {
+  opacity: 0;
+}
+#cursor.hover {
+  opacity: 0.1;
+  transform: scale(2.5);
+}
+#cursor.active {
+  opacity: 0.5;
+  transform: scale(0.5);
+}
+#clickME {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #009688;
+}
+/* ===== 鼠标同心圆特效（结束） ===== */
+
+/* ===== 滚动触发背景虚化（开始） ===== */
+/* 说明：为 #content 添加 .scrolled 时，制造轻微模糊与缩放 */
+#content.scrolled::before,
+#content.scrolled::after {
+  filter: blur(6px);
+  transform: scale(1.02);
+}
+#content::before,
+#content::after {
+  transition: filter 0.3s ease, transform 0.3s ease !important;
+  filter: blur(0px);
+  transform: scale(1.02);
+}
+/* 若你的主题容器选择器不同（例如 #page 或 #web_bg），可告诉我替你调整 */
+/* ===== 滚动触发背景虚化（结束） ===== */
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
