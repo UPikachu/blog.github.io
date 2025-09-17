@@ -189,7 +189,14 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+    })(window)</script><style type="text/css">
+#cursor{position:fixed;width:16px;height:16px;background:#009688;border-radius:8px;opacity:0.25;z-index:10086;pointer-events:none;transition:0.2s ease-in-out;transition-property:background,opacity,transform}
+#cursor.hidden{opacity:0}
+#cursor.hover{opacity:0.1;transform:scale(2.5)}
+#cursor.active{opacity:0.5;transform:scale(0.5)}
+#clickME{cursor:pointer;display:inline-block;border:1px solid #009688}
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
   endLoading: () => {
     document.getElementById('loading-box').classList.add("loaded");
   },
@@ -284,38 +291,128 @@ queueMicrotask(() => {
   setTimeout(
     console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
   );
-});</script><script async src="/anzhiyu/random.js"></script><script async src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/cursor_01.js"></script><script async src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/joe/censor10.js"></script><script>(function() {
-  var SRC = 'https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/joe/censor10.js';
-  function loadMouseEffect() {
-    var s = document.createElement('script');
-    s.src = SRC; s.async = true;
-    document.body.appendChild(s);
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script>
+(function(){
+  var urls = [
+    'https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/cursor_01.js',
+    'https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/cursor_01.js'
+  ];
+  function loadOnce(){
+    if (document.documentElement.__cursor01_loaded) return;
+    document.documentElement.__cursor01_loaded = true;
+    (function tryLoad(i){
+      if(i >= urls.length) return;
+      var s = document.createElement('script');
+      s.src = urls[i];
+      s.async = true;
+      s.onerror = function(){ tryLoad(i+1); };
+      document.body.appendChild(s);
+    })(0);
   }
-  // 首次进入页面加载一次
-  loadMouseEffect();
-  // 每次 Pjax 切换完成后再次加载
-  document.addEventListener('pjax:complete', loadMouseEffect);
-})();</script><script async src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script><script>(function(){
-  function onScroll(){
-    try{
-      var el = document.querySelector('#content');
-      if(!el) return;
-      if (window.scrollY > window.innerHeight * 0.3) {
-        el.classList.add('scrolled');
-      } else {
-        el.classList.remove('scrolled');
-      }
-    }catch(e){}
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  document.addEventListener('pjax:end', onScroll);
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', onScroll, {once:true});
-  } else {
-    onScroll();
-  }
-})();</script><script async src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/xiaxue.js"></script><script async src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/yinghua.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
-</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+  loadOnce();
+  document.addEventListener('pjax:complete', function(){
+    document.documentElement.__cursor01_loaded = false;
+    loadOnce();
+  });
+})();
+</script>
+<script>
+(function() {
+    // 樱花飘落特效
+    function initSakura() {
+        // 创建樱花容器
+        const sakuraContainer = document.createElement('div');
+        sakuraContainer.id = 'sakura-container';
+        sakuraContainer.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        `;
+        document.body.appendChild(sakuraContainer);
+
+        // 添加樱花样式
+        const sakuraStyle = document.createElement('style');
+        sakuraStyle.innerHTML = `
+            .sakura-petal {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: linear-gradient(45deg, #ffb7c5 0%, #ffc0cb 50%, #ff69b4 100%);
+                border-radius: 50% 0 50% 0;
+                animation: sakuraFall linear infinite;
+                opacity: 0.8;
+                transform-origin: center;
+            }
+            .sakura-petal:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, #ffb7c5 0%, #ffc0cb 50%, #ff69b4 100%);
+                border-radius: 0 50% 0 50%;
+                transform: rotate(45deg);
+            }
+            @keyframes sakuraFall {
+                0% {
+                    transform: translateY(-100px) rotate(0deg) translateX(0px);
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.8;
+                }
+                100% {
+                    transform: translateY(calc(100vh + 100px)) rotate(360deg) translateX(100px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(sakuraStyle);
+
+        // 创建单个樱花花瓣
+        function createSakuraPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'sakura-petal';
+            
+            // 随机位置和属性
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.animationDuration = (Math.random() * 4 + 3) + 's';
+            petal.style.animationDelay = Math.random() * 2 + 's';
+            petal.style.transform = `scale(${Math.random() * 0.6 + 0.4}) rotate(${Math.random() * 360}deg)`;
+            
+            sakuraContainer.appendChild(petal);
+
+            // 自动清理
+            setTimeout(() => {
+                if (petal.parentNode) {
+                    petal.parentNode.removeChild(petal);
+                }
+            }, 10000);
+        }
+
+        // 定期创建樱花
+        const sakuraInterval = setInterval(createSakuraPetal, 400);
+        
+        // 页面卸载时清理
+        window.addEventListener('beforeunload', () => {
+            clearInterval(sakuraInterval);
+        });
+    }
+
+    // 启动樱花特效
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSakura);
+    } else {
+        initSakura();
+    }
+})();
+</script>
+<script src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 var pjax = new Pjax({
   elements: 'a:not([target="_blank"])',
   selectors: pjaxSelectors,
